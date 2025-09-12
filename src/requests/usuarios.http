@@ -1,0 +1,34 @@
+### Listar todos los usuarios
+GET http://localhost:8080/api/usuarios
+Accept: application/json
+
+### Obtener un usuario por ID
+GET http://localhost:8080/api/usuarios/2
+Accept: application/json
+
+### Crear un usuario
+POST http://localhost:8080/api/usuarios
+Content-Type: application/json
+
+{
+  "nombre": "Roberto",
+  "email": "juan.perez@example.com",
+  "rol": "empleado",
+  "fechaIngreso": "2025-09-06",
+  "activo": true
+}
+
+### Actualizar un usuario
+PUT http://localhost:8080/api/usuarios/2
+Content-Type: application/json
+
+{
+  "nombre": "Roberto Palacios",
+  "email": "juan.carlos@example.com",
+  "rol": "admin",
+  "fechaIngreso": "2025-09-06",
+  "activo": true
+}
+
+### Eliminar un usuario
+DELETE http://localhost:8080/api/usuarios/1

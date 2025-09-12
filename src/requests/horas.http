@@ -1,0 +1,58 @@
+### Crear proyecto
+POST http://localhost:8080/api/proyectos
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nombre": "Sistema de gestion",
+  "descripcion": "Proyecto de prueba",
+  "fechaInicio": "2025-09-01",
+  "fechaFin": "2025-12-31"
+}
+
+### Listar proyectos
+GET http://localhost:8080/api/proyectos
+Accept: application/json
+
+### Listar todas las horas trabajadas
+GET http://localhost:8080/api/horas
+Accept: application/json
+
+### Obtener un registro de horas trabajadas
+GET http://localhost:8080/api/horas/4
+Accept: application/json
+
+### Crear un registro de horas trabajadas
+POST http://localhost:8080/api/horas
+Content-Type: application/json
+
+{
+  "usuario": {
+    "id": 1
+  },
+  "proyecto": {
+    "id": 1
+  },
+  "fecha": "2025-09-06",
+  "horas": 8,
+  "descripcion": "Desarrollo de módulo de reportes"
+}
+
+### Actualizar un registro de horas
+PUT http://localhost:8080/api/horas/1
+Content-Type: application/json
+
+{
+  "usuario": {
+    "id": 1
+  },
+  "proyecto": {
+    "id": 1
+  },
+  "fecha": "2025-09-06",
+  "horas": 6,
+  "descripcion": "Ajuste en reportes y pruebas"
+}
+
+### Eliminar un registro de horas
+DELETE http://localhost:8080/api/horas/4
