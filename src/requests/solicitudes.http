@@ -1,0 +1,38 @@
+### Listar todas las solicitudes
+GET http://localhost:8080/api/solicitudes
+Accept: application/json
+
+### Obtener una solicitud por ID
+GET http://localhost:8080/api/solicitudes/1
+Accept: application/json
+
+### Crear una solicitud de permiso
+POST http://localhost:8080/api/solicitudes
+Content-Type: application/json
+
+{
+  "usuario": {
+    "id": 1
+  },
+  "fechaInicio": "2025-09-10",
+  "fechaFin": "2025-09-15",
+  "tipo": "vacaciones",
+  "estado": "pendiente"
+}
+
+### Actualizar una solicitud
+PUT http://localhost:8080/api/solicitudes/1
+Content-Type: application/json
+
+{
+  "usuario": {
+    "id": 1
+  },
+  "fechaInicio": "2025-09-11",
+  "fechaFin": "2025-09-16",
+  "tipo": "vacaciones2",
+  "estado": "aprobado"
+}
+
+### Eliminar una solicitud
+DELETE http://localhost:8080/api/solicitudes/1
