@@ -6,6 +6,8 @@ import lombok.*;
 import java.time.LocalDate;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "proyectos")
 @Data
@@ -24,6 +26,7 @@ public class Proyecto {
     private LocalDate fechaFin;
 
     @OneToMany(mappedBy = "proyecto")
+    @JsonIgnore
     private List<HorasTrabajadas> horasTrabajadas;
 }
 
