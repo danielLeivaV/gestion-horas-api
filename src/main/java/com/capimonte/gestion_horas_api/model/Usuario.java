@@ -5,6 +5,8 @@ import lombok.*;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "usuarios")
 @Data
@@ -22,9 +24,11 @@ public class Usuario {
     private String rol;
 
     @OneToMany(mappedBy = "usuario")
+    @JsonIgnore
     private List<HorasTrabajadas> horasTrabajadas;
 
     @OneToMany(mappedBy = "usuario")
+    @JsonIgnore
     private List<SolicitudPermiso> solicitudesPermiso;
 
     @OneToMany(mappedBy = "titular")

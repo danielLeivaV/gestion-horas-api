@@ -5,6 +5,8 @@ import lombok.*;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "horas_trabajadas")
 @Data // genera getters, setters, toString, equals y hashCode
@@ -23,10 +25,12 @@ public class HorasTrabajadas {
 
     @ManyToOne
     @JoinColumn(name = "usuario_id", nullable = false)
+    @JsonIgnore
     private Usuario usuario;
 
     @ManyToOne
     @JoinColumn(name = "proyecto_id", nullable = false)
+    @JsonIgnore
     private Proyecto proyecto;
 }
 
