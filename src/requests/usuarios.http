@@ -24,7 +24,7 @@ Content-Type: application/json
 
 {
   "nombre": "Roberto Palacios",
-  "email": "juan.carlos@example.com",
+  "email": "roberto.p@example.com",
   "rol": "admin",
   "fechaIngreso": "2025-09-06",
   "activo": true

@@ -19,36 +19,30 @@ GET http://localhost:8080/api/horas
 Accept: application/json
 
 ### Obtener un registro de horas trabajadas
-GET http://localhost:8080/api/horas/4
+GET http://localhost:8080/api/horas/6
 Accept: application/json
 
 ### Crear un registro de horas trabajadas
+
+
 POST http://localhost:8080/api/horas
 Content-Type: application/json
 
 {
-  "usuario": {
-    "id": 1
-  },
-  "proyecto": {
-    "id": 1
-  },
+  "usuarioId": 1,
+  "proyectoId": 1,
   "fecha": "2025-09-06",
   "horas": 8,
   "descripcion": "Desarrollo de módulo de reportes"
 }
 
 ### Actualizar un registro de horas
-PUT http://localhost:8080/api/horas/1
+PUT http://localhost:8080/api/horas/6
 Content-Type: application/json
 
 {
-  "usuario": {
-    "id": 1
-  },
-  "proyecto": {
-    "id": 1
-  },
+  "usuarioId": 1,
+  "proyectoId": 1,
   "fecha": "2025-09-06",
   "horas": 6,
   "descripcion": "Ajuste en reportes y pruebas"
