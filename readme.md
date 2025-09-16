@@ -22,7 +22,7 @@ API REST desarrollada con **Spring Boot** para gestionar usuarios y registrar ho
 ## 📂 Estructura básica
 
 ```
-src/main/java/com/capimonte/gestion_horas_api/
+src/main/java/com/capimonte/gestion-horas-api/
 ├── controller/    # Controladores REST
 ├── model/         # Entidades JPA
 ├── repository/    # Repositorios Spring Data
@@ -33,7 +33,7 @@ src/main/java/com/capimonte/gestion_horas_api/
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone https://github.com/tu-usuario/gestion-horas-api.git
+   git clone https://github.com/danielLeivaV/gestion-horas-api.git
    ```
 
 2. **Configurar application.properties** con tu base de datos PostgreSQL
@@ -48,6 +48,9 @@ src/main/java/com/capimonte/gestion_horas_api/
    GET  http://localhost:8080/api/usuarios
    POST http://localhost:8080/api/usuarios
    ```
+   ## pruebas provisorias
+
+   https://github.com/danielLeivaV/gestion-horas-api/tree/main/src/requests
 
 ## 📈 Próximos pasos
 
